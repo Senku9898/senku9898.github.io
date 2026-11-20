@@ -1,0 +1,156 @@
+:root {
+  --primary: #5b4bff;
+  --primary-dark: #4638d4;
+  --bg: #0f0f13;
+  --surface: #1a1a22;
+  --text: #f2f2f7;
+  --text-muted: #a0a0b0;
+  --danger: #ff4d6d;
+  --radius: 16px;
+  --font-ar: "Segoe UI", "Tahoma", "Arial", sans-serif;
+  --font-en: system-ui, -apple-system, sans-serif;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: var(--font-ar);
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+  line-height: 1.6;
+}
+
+[dir="ltr"] body { font-family: var(--font-en); }
+
+.container {
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 24px 20px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.logo {
+  font-size: 1.6rem;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+.logo span { color: var(--primary); }
+
+.lang-btn {
+  background: var(--surface);
+  border: 1px solid #333;
+  color: var(--text);
+  padding: 6px 14px;
+  border-radius: 999px;
+  cursor: pointer;
+  font-size: 0.85rem;
+}
+
+.hero {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.hero h1 {
+  font-size: 2rem;
+  margin-bottom: 12px;
+}
+
+.hero p {
+  color: var(--text-muted);
+  margin-bottom: 28px;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: var(--primary);
+  color: white;
+  text-decoration: none;
+  padding: 14px 28px;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.btn:hover { background: var(--primary-dark); }
+.btn:disabled {
+  background: #444;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+.profile-card {
+  background: var(--surface);
+  border-radius: var(--radius);
+  padding: 28px 24px;
+  text-align: center;
+}
+
+.avatar {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  background: #2a2a35;
+  margin: 0 auto 16px;
+  object-fit: cover;
+  border: 3px solid var(--primary);
+}
+
+.display-name {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.username {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  margin-bottom: 16px;
+}
+
+.bio {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  margin-bottom: 24px;
+}
+
+.fallback {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.fallback h2 {
+  margin-bottom: 12px;
+}
+
+.fallback p {
+  color: var(--text-muted);
+  margin-bottom: 24px;
+}
+
+.loading {
+  text-align: center;
+  padding: 80px 20px;
+  color: var(--text-muted);
+}
+
+footer {
+  text-align: center;
+  margin-top: 60px;
+  color: var(--text-muted);
+  font-size: 0.8rem;
+}
